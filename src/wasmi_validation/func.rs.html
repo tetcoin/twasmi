@@ -1224,7 +1224,7 @@
 };
 
 <span class="kw">use</span> <span class="ident">core</span>::<span class="ident">u32</span>;
-<span class="kw">use</span> <span class="ident">parity_wasm</span>::<span class="ident">elements</span>::{<span class="ident">BlockType</span>, <span class="ident">Func</span>, <span class="ident">FuncBody</span>, <span class="ident">Instruction</span>, <span class="ident">TableElementType</span>, <span class="ident">ValueType</span>};
+<span class="kw">use</span> <span class="ident">tetsy_wasm</span>::<span class="ident">elements</span>::{<span class="ident">BlockType</span>, <span class="ident">Func</span>, <span class="ident">FuncBody</span>, <span class="ident">Instruction</span>, <span class="ident">TableElementType</span>, <span class="ident">ValueType</span>};
 
 <span class="doccomment">/// Maximum number of entries in value stack per function.</span>
 <span class="kw">const</span> <span class="ident">DEFAULT_VALUE_STACK_LIMIT</span>: <span class="ident">usize</span> <span class="op">=</span> <span class="number">16384</span>;
@@ -1337,7 +1337,7 @@
     }
 
     <span class="comment">// The last `end` opcode should pop last instruction.</span>
-    <span class="comment">// parity-wasm ensures that there is always `End` opcode at</span>
+    <span class="comment">// tetsy-wasm ensures that there is always `End` opcode at</span>
     <span class="comment">// the end of the function body.</span>
     <span class="macro">assert</span><span class="macro">!</span>(<span class="ident">context</span>.<span class="ident">frame_stack</span>.<span class="ident">is_empty</span>());
 
