@@ -70,7 +70,7 @@ impl<'a> RuntimeArgs<'a> {
 ///
 /// ```rust
 /// use std::fmt;
-/// use wasmi::{Error, HostError};
+/// use twasmi::{Error, HostError};
 ///
 /// #[derive(Debug)]
 /// struct MyError {
@@ -131,7 +131,7 @@ impl HostError {
 /// # Examples
 ///
 /// ```rust
-/// use wasmi::{
+/// use twasmi::{
 ///     Externals, RuntimeValue, RuntimeArgs, Error, ModuleImportResolver,
 ///     FuncRef, ValueType, Signature, FuncInstance, Trap,
 /// };

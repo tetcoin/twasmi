@@ -1,6 +1,6 @@
 //! Official spec testsuite.
 
-extern crate wasmi;
+extern crate twasmi;
 extern crate wabt;
 
 mod spec;

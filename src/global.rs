@@ -3,7 +3,7 @@ use std::cell::Cell;
 use value::RuntimeValue;
 use Error;
 use types::ValueType;
-use parity_wasm::elements::{ValueType as EValueType};
+use tetsy_wasm::elements::{ValueType as EValueType};
 
 /// Reference to a global variable (See [`GlobalInstance`] for details).
 ///

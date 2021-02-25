@@ -3,8 +3,8 @@
 use std::collections::HashMap;
 
 use wabt::script::{self, Action, Command, CommandKind, ScriptParser, Value};
-use wasmi::memory_units::Pages;
-use wasmi::{Error as InterpreterError, Externals, FuncInstance, FuncRef, GlobalDescriptor,
+use twasmi::memory_units::Pages;
+use twasmi::{Error as InterpreterError, Externals, FuncInstance, FuncRef, GlobalDescriptor,
             GlobalInstance, GlobalRef, ImportResolver, ImportsBuilder, MemoryDescriptor,
             MemoryInstance, MemoryRef, Module, ModuleImportResolver, ModuleInstance, ModuleRef,
             RuntimeArgs, RuntimeValue, Signature, TableDescriptor, TableInstance, TableRef, Trap};

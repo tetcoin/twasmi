@@ -1,6 +1,6 @@
 use super::{validate_module, ValidatedModule};
-use parity_wasm::builder::module;
-use parity_wasm::elements::{
+use tetsy_wasm::builder::module;
+use tetsy_wasm::elements::{
 	External, GlobalEntry, GlobalType, ImportEntry, InitExpr, MemoryType,
 	Instruction, Instructions, TableType, ValueType, BlockType, deserialize_buffer,
 	Module,

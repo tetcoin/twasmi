@@ -2,7 +2,7 @@ use std::u32;
 use std::fmt;
 use std::cell::RefCell;
 use std::rc::Rc;
-use parity_wasm::elements::ResizableLimits;
+use tetsy_wasm::elements::ResizableLimits;
 use Error;
 use func::FuncRef;
 use module::check_limits;

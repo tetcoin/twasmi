@@ -1,7 +1,7 @@
 use std::error;
 use std::fmt;
 use std::collections::HashSet;
-use parity_wasm::elements::{
+use tetsy_wasm::elements::{
 	BlockType, External, GlobalEntry, GlobalType, Internal, MemoryType, Module, Instruction,
 	ResizableLimits, TableType, ValueType, InitExpr, Type,
 };
@@ -55,7 +55,7 @@ impl ::std::ops::Deref for ValidatedModule {
 pub fn deny_floating_point(module: &Module) -> Result<(), Error> {
 	if let Some(code) = module.code_section() {
 		for op in code.bodies().iter().flat_map(|body| body.code().elements()) {
-			use parity_wasm::elements::Instruction::*;
+			use tetsy_wasm::elements::Instruction::*;
 
 			macro_rules! match_eq {
 				($pattern:pat) => {
@@ -141,7 +141,7 @@ pub fn deny_floating_point(module: &Module) -> Result<(), Error> {
 	}
 
 	if let (Some(sec), Some(types)) = (module.function_section(), module.type_section()) {
-		use parity_wasm::elements::{Type, ValueType};
+		use tetsy_wasm::elements::{Type, ValueType};
 
 		let types = types.types();
 

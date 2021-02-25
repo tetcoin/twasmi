@@ -4,7 +4,7 @@ use std::cmp;
 use std::fmt;
 use std::rc::Rc;
 use std::cell::RefCell;
-use parity_wasm::elements::ResizableLimits;
+use tetsy_wasm::elements::ResizableLimits;
 use Error;
 use memory_units::{RoundUpTo, Pages, Bytes};
 
@@ -157,8 +157,8 @@ impl MemoryInstance {
 	/// To convert number of pages to number of bytes you can use the following code:
 	///
 	/// ```rust
-	/// use wasmi::MemoryInstance;
-	/// use wasmi::memory_units::*;
+	/// use twasmi::MemoryInstance;
+	/// use twasmi::memory_units::*;
 	///
 	/// let memory = MemoryInstance::alloc(Pages(1), None).unwrap();
 	/// let byte_size: Bytes = memory.current_size().into();

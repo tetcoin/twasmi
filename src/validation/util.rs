@@ -1,4 +1,4 @@
-use parity_wasm::elements::{Local, ValueType};
+use tetsy_wasm::elements::{Local, ValueType};
 use validation::Error;
 
 /// Locals are the concatenation of a slice of function parameters

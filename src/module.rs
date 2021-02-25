@@ -4,7 +4,7 @@ use std::rc::Rc;
 use std::cell::RefCell;
 use std::fmt;
 use std::collections::HashMap;
-use parity_wasm::elements::{External, InitExpr, Internal, Instruction, ResizableLimits, Type};
+use tetsy_wasm::elements::{External, InitExpr, Internal, Instruction, ResizableLimits, Type};
 use {Module, Error, Signature, MemoryInstance, RuntimeValue, TableInstance};
 use imports::ImportResolver;
 use global::{GlobalInstance, GlobalRef};
@@ -474,9 +474,9 @@ impl ModuleInstance {
 	/// # Examples
 	///
 	/// ```rust
-	/// use wasmi::{ModuleInstance, ImportsBuilder, NopExternals};
-	/// # fn func() -> Result<(), ::wasmi::Error> {
-	/// # let module = wasmi::Module::from_buffer(&[0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]).unwrap();
+	/// use twasmi::{ModuleInstance, ImportsBuilder, NopExternals};
+	/// # fn func() -> Result<(), ::twasmi::Error> {
+	/// # let module = twasmi::Module::from_buffer(&[0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]).unwrap();
 	///
 	/// // ModuleInstance::new returns instance which `start` function isn't called.
 	/// let not_started = ModuleInstance::new(
@@ -494,9 +494,9 @@ impl ModuleInstance {
 	/// instantiated module without calling `start` function.
 	///
 	/// ```rust
-	/// use wasmi::{ModuleInstance, ImportsBuilder, NopExternals};
-	/// # fn func() -> Result<(), ::wasmi::Error> {
-	/// # let module = wasmi::Module::from_buffer(&[0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]).unwrap();
+	/// use twasmi::{ModuleInstance, ImportsBuilder, NopExternals};
+	/// # fn func() -> Result<(), ::twasmi::Error> {
+	/// # let module = twasmi::Module::from_buffer(&[0x00, 0x61, 0x73, 0x6d, 0x01, 0x00, 0x00, 0x00]).unwrap();
 	///
 	/// // This will panic if the module actually contain `start` function.
 	/// let not_started = ModuleInstance::new(
@@ -572,9 +572,9 @@ impl ModuleInstance {
 	/// Invoke a function that takes two numbers and returns sum of them.
 	///
 	/// ```rust
-	/// # extern crate wasmi;
+	/// # extern crate twasmi;
 	/// # extern crate wabt;
-	/// # use wasmi::{ModuleInstance, ImportsBuilder, NopExternals, RuntimeValue};
+	/// # use twasmi::{ModuleInstance, ImportsBuilder, NopExternals, RuntimeValue};
 	/// # fn main() {
 	/// # let wasm_binary: Vec<u8> = wabt::wat2wasm(
 	/// #   r#"
@@ -587,7 +587,7 @@ impl ModuleInstance {
 	/// #   )
 	/// #   "#,
 	/// # ).expect("failed to parse wat");
-	/// # let module = wasmi::Module::from_buffer(&wasm_binary).expect("failed to load wasm");
+	/// # let module = twasmi::Module::from_buffer(&wasm_binary).expect("failed to load wasm");
 	/// # let instance = ModuleInstance::new(
 	/// # &module,
 	/// # &ImportsBuilder::default()

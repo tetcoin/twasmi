@@ -2,7 +2,7 @@
 #[macro_use]
 extern crate libfuzzer_sys;
 extern crate wabt;
-extern crate wasmi;
+extern crate twasmi;
 extern crate tempdir;
 
 use std::fs::File;
@@ -40,14 +40,14 @@ fn run_spec(data: &[u8]) -> Result<(), ()> {
 	}
 }
 
-fn run_wasmi(data: &[u8]) -> Result<(), ()> {
-	let _ = wasmi::Module::from_buffer(data).map_err(|_| ())?;
+fn run_twasmi(data: &[u8]) -> Result<(), ()> {
+	let _ = twasmi::Module::from_buffer(data).map_err(|_| ())?;
 	Ok(())
 }
 
 fuzz_target!(|data: &[u8]| {
-	let wasmi_result = run_wasmi(data);
+	let twasmi_result = run_twasmi(data);
 	let wasm_result = run_spec(data);
 
-	assert_eq!(wasmi_result.is_ok(), wasm_result.is_ok());
+	assert_eq!(twasmi_result.is_ok(), wasm_result.is_ok());
 });

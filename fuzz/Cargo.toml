@@ -1,6 +1,6 @@
 
 [package]
-name = "wasmi-fuzz"
+name = "twasmi-fuzz"
 version = "0.0.1"
 authors = ["Automatically generated"]
 publish = false
@@ -9,7 +9,7 @@ publish = false
 cargo-fuzz = true
 
 [dependencies]
-wasmi = { path = ".." }
+twasmi = { path = ".." }
 wabt = "0.2.0"
 wasmparser = "0.14.1"
 tempdir = "0.3.6"

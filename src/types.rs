@@ -1,6 +1,6 @@
 use std::borrow::Cow;
 
-use parity_wasm::elements::{
+use tetsy_wasm::elements::{
 	FunctionType, ValueType as EValueType, GlobalType, TableType, MemoryType};
 
 /// Signature of a [function].
@@ -24,7 +24,7 @@ impl Signature {
 	/// # Examples
 	///
 	/// ```rust
-	/// use wasmi::{Signature, ValueType};
+	/// use twasmi::{Signature, ValueType};
 	///
 	/// // s1: (i32) -> ()
 	/// let s1 = Signature::new(&[ValueType::I32][..], None);

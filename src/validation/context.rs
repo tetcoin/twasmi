@@ -1,4 +1,4 @@
-use parity_wasm::elements::{MemoryType, TableType, GlobalType, BlockType, ValueType, FunctionType};
+use tetsy_wasm::elements::{MemoryType, TableType, GlobalType, BlockType, ValueType, FunctionType};
 use validation::Error;
 
 #[derive(Default, Debug)]

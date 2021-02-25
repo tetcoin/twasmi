@@ -1,5 +1,5 @@
 use std::u32;
-use parity_wasm::elements::{Instruction, BlockType, ValueType, TableElementType, Func, FuncBody};
+use tetsy_wasm::elements::{Instruction, BlockType, ValueType, TableElementType, Func, FuncBody};
 use common::{DEFAULT_MEMORY_INDEX, DEFAULT_TABLE_INDEX};
 use validation::context::ModuleContext;
 

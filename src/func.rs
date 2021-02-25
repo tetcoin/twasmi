@@ -1,6 +1,6 @@
 use std::rc::{Rc, Weak};
 use std::fmt;
-use parity_wasm::elements::Local;
+use tetsy_wasm::elements::Local;
 use {Trap, TrapKind, Signature};
 use host::Externals;
 use runner::{check_function_args, Interpreter};

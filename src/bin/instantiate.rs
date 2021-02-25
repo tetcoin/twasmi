@@ -1,16 +1,16 @@
 //! Handy utility to test whether the given module deserializes,
 //! validates and instantiates successfully.
 
-extern crate wasmi;
+extern crate twasmi;
 
 use std::env::args;
 use std::fs::File;
-use wasmi::{
+use twasmi::{
 	Error, FuncInstance, FuncRef, GlobalDescriptor, GlobalInstance, GlobalRef,
 	ImportsBuilder, MemoryDescriptor, MemoryInstance, MemoryRef, Module,
 	ModuleImportResolver, ModuleInstance, NopExternals, RuntimeValue, Signature,
 	TableDescriptor, TableInstance, TableRef};
-use wasmi::memory_units::*;
+use twasmi::memory_units::*;
 
 fn load_from_file(filename: &str) -> Module {
 	use std::io::prelude::*;

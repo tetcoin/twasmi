@@ -1,10 +1,10 @@
-extern crate parity_wasm;
-extern crate wasmi;
+extern crate tetsy_wasm;
+extern crate twasmi;
 
 use std::env::args;
 
-use parity_wasm::elements::{Internal, External, Type, FunctionType, ValueType};
-use wasmi::{RuntimeValue, ModuleInstance, NopExternals, ImportsBuilder};
+use tetsy_wasm::elements::{Internal, External, Type, FunctionType, ValueType};
+use twasmi::{RuntimeValue, ModuleInstance, NopExternals, ImportsBuilder};
 
 
 fn main() {
@@ -16,7 +16,7 @@ fn main() {
     let func_name = &args[2];
     let (_, program_args) = args.split_at(3);
 
-    let module = parity_wasm::deserialize_file(&args[1]).expect("File to be deserialized");
+    let module = tetsy_wasm::deserialize_file(&args[1]).expect("File to be deserialized");
 
     // Extracts call arguments from command-line arguments
     let args = {
@@ -69,13 +69,13 @@ fn main() {
         }).collect::<Vec<RuntimeValue>>()
     };
 
-    let loaded_module = wasmi::Module::from_parity_wasm_module(module).expect("Module to be valid");
+    let loaded_module = twasmi::Module::from_tetsy_wasm_module(module).expect("Module to be valid");
 
     // Intialize deserialized module. It adds module into It expects 3 parameters:
     // - a name for the module
     // - a module declaration
     // - "main" module doesn't import native module(s) this is why we don't need to provide external native modules here
-    // This test shows how to implement native module https://github.com/NikVolf/parity-wasm/blob/master/src/interpreter/tests/basics.rs#L197
+    // This test shows how to implement native module https://github.com/tetcoin/tetsy-wasm/blob/master/src/interpreter/tests/basics.rs#L197
     let main = ModuleInstance::new(&loaded_module, &ImportsBuilder::default())
         .expect("Failed to instantiate module")
         .run_start(&mut NopExternals)

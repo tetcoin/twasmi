@@ -3,7 +3,7 @@ use std::ops;
 use std::{u32, usize};
 use std::fmt;
 use std::iter::repeat;
-use parity_wasm::elements::Local;
+use tetsy_wasm::elements::Local;
 use {Error, Trap, TrapKind, Signature};
 use module::ModuleRef;
 use memory::MemoryRef;
