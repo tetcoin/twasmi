@@ -88,12 +88,12 @@
 <span class="doccomment">//! Handy utility to test whether the given module deserializes,</span>
 <span class="doccomment">//! validates and instantiates successfully.</span>
 
-<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">wasmi</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">twasmi</span>;
 
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">env</span>::<span class="ident">args</span>;
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">fs</span>::<span class="ident">File</span>;
-<span class="kw">use</span> <span class="ident">wasmi</span>::<span class="ident">memory_units</span>::<span class="kw-2">*</span>;
-<span class="kw">use</span> <span class="ident">wasmi</span>::{
+<span class="kw">use</span> <span class="ident">twasmi</span>::<span class="ident">memory_units</span>::<span class="kw-2">*</span>;
+<span class="kw">use</span> <span class="ident">twasmi</span>::{
     <span class="ident">Error</span>, <span class="ident">FuncInstance</span>, <span class="ident">FuncRef</span>, <span class="ident">GlobalDescriptor</span>, <span class="ident">GlobalInstance</span>, <span class="ident">GlobalRef</span>, <span class="ident">ImportsBuilder</span>,
     <span class="ident">MemoryDescriptor</span>, <span class="ident">MemoryInstance</span>, <span class="ident">MemoryRef</span>, <span class="ident">Module</span>, <span class="ident">ModuleImportResolver</span>, <span class="ident">ModuleInstance</span>,
     <span class="ident">NopExternals</span>, <span class="ident">RuntimeValue</span>, <span class="ident">Signature</span>, <span class="ident">TableDescriptor</span>, <span class="ident">TableInstance</span>, <span class="ident">TableRef</span>,
