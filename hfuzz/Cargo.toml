@@ -5,6 +5,6 @@ authors = ["Sergey Pepyakin <s.pepyakin@gmail.com>"]
 
 [dependencies]
 honggfuzz = "=0.5.9" # Strict equal since hfuzz requires dep and cmd versions to match.
-wasmi = { path = ".." }
+twasmi = { path = ".." }
 tempdir = "0.3.6"
 wabt = "0.9"

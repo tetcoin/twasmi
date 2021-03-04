@@ -1,18 +1,18 @@
 [package]
-name = "wasmi"
+name = "twasmi"
 version = "0.6.2"
 edition = "2018"
 authors = ["Nikolay Volf <nikvolf@gmail.com>", "Svyatoslav Nikolsky <svyatonik@yandex.ru>", "Sergey Pepyakin <s.pepyakin@gmail.com>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/paritytech/wasmi"
-documentation = "https://paritytech.github.io/wasmi/"
+repository = "https://github.com/tetcoin/twasmi"
+documentation = "https://tetcoin.github.io/twasmi/"
 description = "WebAssembly interpreter"
 keywords = ["wasm", "webassembly", "bytecode", "interpreter"]
 exclude = [ "/res/*", "/tests/*", "/fuzz/*", "/benches/*" ]
 
 [dependencies]
-validation = { package = "wasmi-validation", version = "0.3", path = "validation", default-features = false }
+validation = { package = "twasmi-validation", version = "0.3", path = "validation", default-features = false }
 parity-wasm = { version = "0.41.0", default-features = false }
 memory_units = "0.3.0"
 libm = { version = "0.1.2", optional = true }

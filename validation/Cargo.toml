@@ -1,10 +1,10 @@
 [package]
-name = "wasmi-validation"
+name = "twasmi-validation"
 version = "0.3.0"
 authors = ["Parity Technologies <admin@parity.io>"]
 edition = "2018"
 license = "MIT/Apache-2.0"
-repository = "https://github.com/paritytech/wasmi"
+repository = "https://github.com/tetcoin/twasmi"
 description = "Wasm code validator"
 
 [dependencies]

@@ -76,15 +76,15 @@ impl<'a> RuntimeArgs<'a> {
 /// It should be useful for representing custom traps,
 /// troubles at instantiation time or other host specific conditions.
 ///
-/// Types that implement this trait can automatically be converted to `wasmi::Error` and `wasmi::Trap`
-/// and will be represented as a boxed `HostError`. You can then use the various methods on `wasmi::Error`
+/// Types that implement this trait can automatically be converted to `twasmi::Error` and `twasmi::Trap`
+/// and will be represented as a boxed `HostError`. You can then use the various methods on `twasmi::Error`
 /// to get your custom error type back
 ///
 /// # Examples
 ///
 /// ```rust
 /// use std::fmt;
-/// use wasmi::{Error, HostError};
+/// use twasmi::{Error, HostError};
 ///
 /// #[derive(Debug)]
 /// struct MyError {
@@ -101,7 +101,7 @@ impl<'a> RuntimeArgs<'a> {
 ///
 /// fn failable_fn() -> Result<(), Error> {
 ///     let my_error = MyError { code: 1312 };
-///     // Note how you can just convert your errors to `wasmi::Error`
+///     // Note how you can just convert your errors to `twasmi::Error`
 ///     Err(my_error.into())
 /// }
 ///
@@ -132,7 +132,7 @@ impl_downcast!(HostError);
 /// # Examples
 ///
 /// ```rust
-/// use wasmi::{
+/// use twasmi::{
 ///     Externals, RuntimeValue, RuntimeArgs, Error, ModuleImportResolver,
 ///     FuncRef, ValueType, Signature, FuncInstance, Trap,
 /// };

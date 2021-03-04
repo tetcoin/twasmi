@@ -1,4 +1,4 @@
-//! An instruction set used by wasmi.
+//! An instruction set used by twasmi.
 //!
 //! The instruction set is mostly derived from Wasm. However,
 //! there is a substantial difference.

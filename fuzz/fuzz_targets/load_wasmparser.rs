@@ -1,7 +1,7 @@
 #![no_main]
 #[macro_use]
 extern crate libfuzzer_sys;
-extern crate wasmi;
+extern crate twasmi;
 extern crate wasmparser;
 
 use wasmparser::WasmDecoder;
@@ -18,12 +18,12 @@ fn run_wasmparser(data: &[u8]) -> bool {
 	result
 }
 
-fn run_wasmi(data: &[u8]) -> bool {
-	wasmi::Module::from_buffer(data).is_ok()
+fn run_twasmi(data: &[u8]) -> bool {
+	twasmi::Module::from_buffer(data).is_ok()
 }
 
 fuzz_target!(|data: &[u8]| {
 	let wasmparser_success = run_wasmparser(data);
-	let wasmi_success = run_wasmi(data);
-	assert_eq!(wasmparser_success, wasmi_success);
+	let twasmi_success = run_twasmi(data);
+	assert_eq!(wasmparser_success, twasmi_success);
 });
