@@ -1,6 +1,6 @@
 use super::{compile_module, CompiledModule};
 use crate::isa;
-use parity_wasm::{deserialize_buffer, elements::Module};
+use tetsy_wasm::{deserialize_buffer, elements::Module};
 
 use wabt;
 

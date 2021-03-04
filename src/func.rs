@@ -11,7 +11,7 @@ use alloc::{
     vec::Vec,
 };
 use core::fmt;
-use parity_wasm::elements::Local;
+use tetsy_wasm::elements::Local;
 
 /// Reference to a function (See [`FuncInstance`] for details).
 ///

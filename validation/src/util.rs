@@ -1,6 +1,6 @@
 use crate::Error;
 use alloc::string::String;
-use parity_wasm::elements::{Local, ValueType};
+use tetsy_wasm::elements::{Local, ValueType};
 
 #[cfg(test)]
 use assert_matches::assert_matches;

@@ -4,7 +4,7 @@ use crate::{
 };
 
 use core::u32;
-use parity_wasm::elements::{BlockType, Func, FuncBody, Instruction, TableElementType, ValueType};
+use tetsy_wasm::elements::{BlockType, Func, FuncBody, Instruction, TableElementType, ValueType};
 
 /// Maximum number of entries in value stack per function.
 const DEFAULT_VALUE_STACK_LIMIT: usize = 16384;
@@ -117,7 +117,7 @@ pub fn drive<T: FuncValidator>(
     }
 
     // The last `end` opcode should pop last instruction.
-    // parity-wasm ensures that there is always `End` opcode at
+    // tetsy-wasm ensures that there is always `End` opcode at
     // the end of the function body.
     assert!(context.frame_stack.is_empty());
 

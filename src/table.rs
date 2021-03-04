@@ -5,7 +5,7 @@ use alloc::{rc::Rc, vec::Vec};
 use core::cell::RefCell;
 use core::fmt;
 use core::u32;
-use parity_wasm::elements::ResizableLimits;
+use tetsy_wasm::elements::ResizableLimits;
 
 /// Reference to a table (See [`TableInstance`] for details).
 ///

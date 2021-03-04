@@ -1,5 +1,5 @@
 use crate::{Error, PlainValidator};
-use parity_wasm::{
+use tetsy_wasm::{
     builder::module,
     elements::{
         BlockType, External, GlobalEntry, GlobalType, ImportEntry, InitExpr, Instruction,

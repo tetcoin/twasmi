@@ -455,13 +455,13 @@ pub mod memory_units {
 /// Deserialized module prepared for instantiation.
 pub struct Module {
     code_map: Vec<isa::Instructions>,
-    module: parity_wasm::elements::Module,
+    module: tetsy_wasm::elements::Module,
 }
 
 impl Module {
-    /// Create `Module` from `parity_wasm::elements::Module`.
+    /// Create `Module` from `tetsy_wasm::elements::Module`.
     ///
-    /// This function will load, validate and prepare a `parity_wasm`'s `Module`.
+    /// This function will load, validate and prepare a `tetsy_wasm`'s `Module`.
     ///
     /// # Errors
     ///
@@ -470,14 +470,14 @@ impl Module {
     /// # Examples
     ///
     /// ```rust
-    /// extern crate parity_wasm;
+    /// extern crate tetsy_wasm;
     /// extern crate twasmi;
     ///
-    /// use parity_wasm::builder;
-    /// use parity_wasm::elements;
+    /// use tetsy_wasm::builder;
+    /// use tetsy_wasm::elements;
     ///
     /// fn main() {
-    ///     let parity_module =
+    ///     let tetsy_module =
     ///         builder::module()
     ///             .function()
     ///                 .signature().with_param(elements::ValueType::I32).build()
@@ -485,13 +485,13 @@ impl Module {
     ///             .build()
     ///         .build();
     ///
-    ///     let module = twasmi::Module::from_parity_wasm_module(parity_module)
-    ///         .expect("parity-wasm builder generated invalid module!");
+    ///     let module = twasmi::Module::from_tetsy_wasm_module(tetsy_module)
+    ///         .expect("tetsy-wasm builder generated invalid module!");
     ///
     ///     // Instantiate `module`, etc...
     /// }
     /// ```
-    pub fn from_parity_wasm_module(module: parity_wasm::elements::Module) -> Result<Module, Error> {
+    pub fn from_tetsy_wasm_module(module: tetsy_wasm::elements::Module) -> Result<Module, Error> {
         let prepare::CompiledModule { code_map, module } = prepare::compile_module(module)?;
 
         Ok(Module { code_map, module })
@@ -584,12 +584,12 @@ impl Module {
     /// }
     /// ```
     pub fn from_buffer<B: AsRef<[u8]>>(buffer: B) -> Result<Module, Error> {
-        let module = parity_wasm::elements::deserialize_buffer(buffer.as_ref())
-            .map_err(|e: parity_wasm::elements::Error| Error::Validation(e.to_string()))?;
-        Module::from_parity_wasm_module(module)
+        let module = tetsy_wasm::elements::deserialize_buffer(buffer.as_ref())
+            .map_err(|e: tetsy_wasm::elements::Error| Error::Validation(e.to_string()))?;
+        Module::from_tetsy_wasm_module(module)
     }
 
-    pub(crate) fn module(&self) -> &parity_wasm::elements::Module {
+    pub(crate) fn module(&self) -> &tetsy_wasm::elements::Module {
         &self.module
     }
 

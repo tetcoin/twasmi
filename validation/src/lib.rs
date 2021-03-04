@@ -25,7 +25,7 @@ use core::fmt;
 use std::error;
 
 use self::context::ModuleContextBuilder;
-use parity_wasm::elements::{
+use tetsy_wasm::elements::{
     BlockType, ExportEntry, External, FuncBody, GlobalEntry, GlobalType, InitExpr, Instruction,
     Internal, MemoryType, Module, ResizableLimits, TableType, Type, ValueType,
 };

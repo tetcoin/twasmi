@@ -1,4 +1,4 @@
-extern crate parity_wasm;
+extern crate tetsy_wasm;
 extern crate twasmi;
 
 use std::env;

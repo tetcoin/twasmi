@@ -17,7 +17,7 @@ use alloc::{
 };
 use core::cell::{Ref, RefCell};
 use core::fmt;
-use parity_wasm::elements::{External, InitExpr, Instruction, Internal, ResizableLimits, Type};
+use tetsy_wasm::elements::{External, InitExpr, Instruction, Internal, ResizableLimits, Type};
 use validation::{DEFAULT_MEMORY_INDEX, DEFAULT_TABLE_INDEX};
 
 /// Reference to a [`ModuleInstance`].

@@ -1,6 +1,6 @@
 use alloc::{string::String, vec::Vec};
 
-use parity_wasm::elements::{BlockType, FuncBody, Instruction};
+use tetsy_wasm::elements::{BlockType, FuncBody, Instruction};
 
 use crate::isa;
 use validation::func::{

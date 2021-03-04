@@ -13,7 +13,7 @@ exclude = [ "/res/*", "/tests/*", "/fuzz/*", "/benches/*" ]
 
 [dependencies]
 validation = { package = "twasmi-validation", version = "0.3", path = "validation", default-features = false }
-parity-wasm = { version = "0.41.0", default-features = false }
+tetsy-wasm = { version = "0.41.0", default-features = false }
 memory_units = "0.3.0"
 libm = { version = "0.1.2", optional = true }
 num-rational = { version = "0.2.2", default-features = false }
@@ -31,7 +31,7 @@ wabt = "0.9"
 default = ["std"]
 # Disable for no_std support
 std = [
-    "parity-wasm/std",
+    "tetsy-wasm/std",
     "validation/std",
     "num-rational/std",
     "num-rational/bigint-std",

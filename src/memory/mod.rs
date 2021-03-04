@@ -8,7 +8,7 @@ use core::{
     ops::Range,
     u32,
 };
-use parity_wasm::elements::ResizableLimits;
+use tetsy_wasm::elements::ResizableLimits;
 
 #[cfg(all(unix, not(feature = "vec_memory")))]
 #[path = "mmap_bytebuf.rs"]

@@ -3,7 +3,7 @@ use crate::value::RuntimeValue;
 use crate::Error;
 use alloc::rc::Rc;
 use core::cell::Cell;
-use parity_wasm::elements::ValueType as EValueType;
+use tetsy_wasm::elements::ValueType as EValueType;
 
 /// Reference to a global variable (See [`GlobalInstance`] for details).
 ///

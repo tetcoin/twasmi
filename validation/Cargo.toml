@@ -8,12 +8,12 @@ repository = "https://github.com/tetcoin/twasmi"
 description = "Wasm code validator"
 
 [dependencies]
-parity-wasm = { version = "0.41.0", default-features = false }
+tetsy-wasm = { version = "0.41.0", default-features = false }
 
 [dev-dependencies]
 assert_matches = "1.1"
 
 [features]
 default = ["std"]
-std = ["parity-wasm/std"]
+std = ["tetsy-wasm/std"]
 core = []

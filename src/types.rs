@@ -1,6 +1,6 @@
 use alloc::borrow::Cow;
 
-use parity_wasm::elements::{
+use tetsy_wasm::elements::{
     FunctionType, GlobalType, MemoryType, TableType, ValueType as EValueType,
 };
 
